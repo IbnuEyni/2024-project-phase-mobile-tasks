@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/core/usecases/usecase.dart';
+import 'package:equatable/equatable.dart';
 
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
@@ -15,17 +16,21 @@ class CreateProduct implements Usecase<Product, CreateParams> {
   }
 }
 
-class CreateParams {
+class CreateParams extends Equatable {
   final int id;
   final String name;
   final String description;
   final String imageUrl;
   final int price;
 
-  CreateParams(
-      {required this.id,
-      required this.name,
-      required this.description,
-      required this.imageUrl,
-      required this.price});
+  const CreateParams({
+    required this.id,
+    required this.name,
+    required this.description,
+    required this.imageUrl,
+    required this.price,
+  });
+
+  @override
+  List<Object?> get props => [id, name, description, imageUrl, price];
 }

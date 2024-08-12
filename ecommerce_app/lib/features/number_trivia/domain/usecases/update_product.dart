@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/core/usecases/usecase.dart';
+import 'package:equatable/equatable.dart';
 
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
@@ -15,7 +16,7 @@ class UpdateProduct implements Usecase<Product, UpdateParams> {
   }
 }
 
-class UpdateParams {
+class UpdateParams extends Equatable {
   final int id;
   final String name;
   final String description;
@@ -28,4 +29,8 @@ class UpdateParams {
       required this.description,
       required this.imageUrl,
       required this.price});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id, name, description, imageUrl, price];
 }

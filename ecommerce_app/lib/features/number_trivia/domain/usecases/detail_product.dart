@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/core/usecases/usecase.dart';
+import 'package:equatable/equatable.dart';
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
 import '../repositories/product_repository.dart';
@@ -13,8 +14,12 @@ class DetailProduct implements Usecase<Product, DetailParams> {
   }
 }
 
-class DetailParams {
+class DetailParams extends Equatable {
   final int id;
 
   DetailParams({required this.id});
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id];
 }
