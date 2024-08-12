@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:ecommerce_app/core/error/failure.dart';
+import '../../../../core/error/failure.dart';
 import '../entities/number_trivia.dart';
 import '../repositories/number_trivia_repositories.dart';
 
 class GetConcreteNumberTrivia {
-  final NumberTriviaRepositories repository;
+  final NumberTriviaRepository repository;
 
   GetConcreteNumberTrivia(this.repository);
 
