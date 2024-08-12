@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/core/usecases/usecase.dart';
 
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
 import '../repositories/product_repository.dart';
 
-class CreateProduct {
+class CreateProduct implements Usecase<Product, CreateParams> {
   final ProductRepository repository;
 
   CreateProduct({required this.repository});

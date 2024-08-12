@@ -1,10 +1,11 @@
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/core/usecases/usecase.dart';
 import 'detail_product.dart';
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
 import '../repositories/product_repository.dart';
 
-class DeleteProduct {
+class DeleteProduct implements Usecase<Unit, DeleteParams> {
   final ProductRepository repository;
 
   DeleteProduct({required this.repository});
