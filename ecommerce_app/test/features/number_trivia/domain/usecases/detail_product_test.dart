@@ -33,7 +33,7 @@ void main() {
         .thenAnswer((_) async => Right(tProduct));
 
     //act
-    final result = await usecase.execute(DetailParams(id: tid));
+    final result = await usecase(DetailParams(id: tid));
 
     //arrange
     expect(result, Right(tProduct));

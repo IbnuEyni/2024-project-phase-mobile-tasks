@@ -37,7 +37,7 @@ void main() {
     when(mockProductRepository.updateProduct(any, any, any, any, any))
         .thenAnswer((_) async => Right(tProduct));
     //act
-    final result = await usecase.execute(
+    final result = await usecase(
       UpdateParams(
         id: tid,
         name: tname,

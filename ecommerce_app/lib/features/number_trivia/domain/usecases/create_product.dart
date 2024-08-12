@@ -8,7 +8,7 @@ class CreateProduct {
   final ProductRepository repository;
 
   CreateProduct({required this.repository});
-  Future<Either<Failure, Product>> execute(CreateParams params) async {
+  Future<Either<Failure, Product>> call(CreateParams params) async {
     return await repository.createProduct(params.id, params.name,
         params.description, params.imageUrl, params.price);
   }

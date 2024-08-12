@@ -26,7 +26,7 @@ void main() {
         .thenAnswer((_) async => const Right(unit));
 
     //act
-    final result = await usecase.execute(DeleteParams(id: tid));
+    final result = await usecase(DeleteParams(id: tid));
 
     //arrange
     expect(result, const Right(unit));

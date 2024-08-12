@@ -8,7 +8,7 @@ class UpdateProduct {
   final ProductRepository repository;
 
   UpdateProduct({required this.repository});
-  Future<Either<Failure, Product>> execute(UpdateParams params) async {
+  Future<Either<Failure, Product>> call(UpdateParams params) async {
     return await repository.updateProduct(params.id, params.name,
         params.description, params.imageUrl, params.price);
   }

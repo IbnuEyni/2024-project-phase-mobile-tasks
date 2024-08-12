@@ -7,7 +7,7 @@ class DetailProduct {
   final ProductRepository repository;
 
   DetailProduct({required this.repository});
-  Future<Either<Failure, Product>> execute(DetailParams params) async {
+  Future<Either<Failure, Product>> call(DetailParams params) async {
     return await repository.detailProduct(params.id);
   }
 }
