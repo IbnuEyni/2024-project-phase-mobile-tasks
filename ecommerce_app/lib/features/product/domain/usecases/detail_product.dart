@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:ecommerce_app/core/usecases/usecase.dart';
+import '../../../../core/usecases/usecase.dart';
 import 'package:equatable/equatable.dart';
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';
