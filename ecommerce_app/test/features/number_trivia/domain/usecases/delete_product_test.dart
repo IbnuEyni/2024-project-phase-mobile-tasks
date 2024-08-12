@@ -20,23 +20,16 @@ void main() {
 
   final tid = 1;
 
-  final tProduct = Product(
-      id: 1,
-      name: 'name',
-      description: 'description',
-      imageUrl: 'imageUrl',
-      price: 1);
-
-  test('should get product details for the id from the repository', () async {
+  test('should delete the product', () async {
     // Arrange
     when(mockProductRepository.deleteProduct(any))
-        .thenAnswer((_) async => Right(tProduct));
+        .thenAnswer((_) async => const Right(unit));
 
     //act
     final result = await usecase.execute(DeleteParams(id: tid));
 
     //arrange
-    expect(result, Right(tProduct));
+    expect(result, const Right(unit));
     verify(mockProductRepository.deleteProduct(tid));
     verifyNoMoreInteractions(mockProductRepository);
   });

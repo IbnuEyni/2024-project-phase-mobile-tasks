@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'create_product.dart';
 
 import '../../../../core/error/failure.dart';
 import '../entities/product.dart';

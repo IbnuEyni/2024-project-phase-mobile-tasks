@@ -25,11 +25,12 @@ void main() {
   final tprice = 10;
 
   final tProduct = Product(
-      id: 1,
-      name: 'name',
-      description: 'description',
-      imageUrl: 'imageUrl',
-      price: 1);
+    id: 1,
+    name: 'name',
+    description: 'description',
+    imageUrl: 'imageUrl',
+    price: 1,
+  );
 
   test('update the product', () async {
     // Arrange
@@ -38,11 +39,12 @@ void main() {
     //act
     final result = await usecase.execute(
       UpdateParams(
-          id: tid,
-          name: tname,
-          description: tdescription,
-          imageUrl: timageUrl,
-          price: tprice),
+        id: tid,
+        name: tname,
+        description: tdescription,
+        imageUrl: timageUrl,
+        price: tprice,
+      ),
     );
 
     // Assert

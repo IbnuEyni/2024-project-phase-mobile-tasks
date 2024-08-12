@@ -21,7 +21,7 @@ abstract class ProductRepository {
     String imageUrl,
     int price,
   );
-  Future<Either<Failure, Product>> deleteProduct(
+  Future<Either<Failure, Unit>> deleteProduct(
     int id,
   );
 }
